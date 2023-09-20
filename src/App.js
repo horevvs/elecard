@@ -14,6 +14,15 @@ function App() {
       <div className='body'>
         <Componentcard />
       </div>
+
+
+
+      <div class="form-check px-5">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/> 
+          <label class="form-check-label" for="flexCheckDefault">
+         Перейти к дереву
+          </label>
+      </div>
       <footer className='footer'>Footer</footer>
     </div>
   );
