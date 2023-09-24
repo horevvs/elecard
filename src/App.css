@@ -1,0 +1,133 @@
+.header {
+  background-color: #282c34;
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+  z-index: 500;
+}
+
+
+img {
+  z-index: 5;
+  border: solid 1px white;
+}
+
+.effect:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: transform 1.2s;
+}
+
+
+
+
+
+
+
+.btnsize {
+  max-height: 45px;
+  margin-bottom: 3%;
+}
+
+
+.body {
+  background: rgb(40, 44, 52);
+  background: linear-gradient(180deg, rgba(40, 44, 52, 1) 57%, rgba(255, 61, 0, 1) 100%);
+  min-height: 700px;
+}
+
+.figcaptionPosition {
+  position: relative;
+  left: 20px;
+  bottom: 220px;
+  color: white;
+  font-weight: 700;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+
+.labelstyle {
+
+  font-size: 18px;
+  font-weight: 700;
+
+
+}
+
+.close:hover {
+  cursor: pointer;
+  color: white;
+  transform: scale(1.2);
+  transition: transform 1.2s;
+}
+
+
+
+
+
+
+.close {
+  font-size: 45px;
+  font-weight: 900;
+  color: rgb(82, 20, 20);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  bottom: 320px;
+  left: 250px;
+}
+
+
+
+.footer {
+  background-color: rgba(255, 61, 0, 1);
+  height: 50px;
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+  z-index: 500;
+}
+
+.size {
+  height: 270px;
+}
+
+.loader-fon {
+  position: fixed;
+  z-index: 800;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+}
+
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 0.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
