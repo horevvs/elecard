@@ -34,10 +34,10 @@ function Componentcard() {
         element => element.id !== id);
       localStorage.setItem("name", JSON.stringify(result));
       setState(result);
- document.getElementById(id).classList.remove('shake')
-    }, 2000
+      document.getElementById(id).classList.remove('shake')
+    }, 800
     );
-   
+
 
   }
 

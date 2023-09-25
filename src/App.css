@@ -136,7 +136,7 @@ z-index: 900;
 
 
 .shake{
-  animation: shake 1s infinite;
+  animation: shake 5s infinite;
 }
 @keyframes shake {
 0%  { transform: translate(2px, 1px)   rotate(0deg);  }
