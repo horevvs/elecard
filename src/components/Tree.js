@@ -64,7 +64,7 @@ export default function Tree() {
     <div className='body'>
       <ul className='tree'>
 
-        <ol className='olstyle' onClick={HideCars}  >Cars</ol>
+        <ol className='olstyle' onClick={HideCars}  >CARS (открыть/закрыть)</ol>
         <div className={hiddencars ? "  " : " show "} >
           {state.filter(element => element.category === 'car').map((item) => (<ul className='mx-5 mt-2' key={item.id}>
             <Image onClick={() => { ShowImage(item.id, item.image) }} src={item.image} thumbnail width='70' height='50' />
@@ -77,7 +77,7 @@ export default function Tree() {
           </ul>))}
         </div>
 
-        <ol className='olstyle' onClick={HideBikes} >Bikes</ol>
+        <ol className='olstyle' onClick={HideBikes} >BIKES (открыть/закрыть)</ol>
         <div className={hiddenbikes ? "  " : " show "} >
           {state.filter(element => element.category === 'bikes').map((item) => (<ul className='mx-5 mt-2' key={item.id}>
             <Image onClick={() => { ShowImage(item.id, item.image) }} src={item.image} thumbnail width='70' height='50' />
@@ -90,7 +90,7 @@ export default function Tree() {
           </ul>))}
         </div>
 
-        <ol className='olstyle ' onClick={HideNature} >Nature</ol>
+        <ol className='olstyle ' onClick={HideNature} >NATURE (открыть/закрыть)</ol>
         <div className={hiddenbinature ? "  " : " show "} >
           {state.filter(element => element.category === 'nature').map((item) => (<ul className='mx-5 mt-2' key={item.id}>
             <Image onClick={() => { ShowImage(item.id, item.image) }} src={item.image} thumbnail width='70' height='50' />
