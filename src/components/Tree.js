@@ -67,10 +67,10 @@ export default function Tree() {
         <div className={hiddencars ? "  " : " show "} >
           {state.filter(element => element.category === 'car').map((item) => (<ul className='mx-5 mt-2' key={item.id}>
             <Image onClick={() => { ShowImage(item.id, item.image) }} src={item.image} thumbnail width='70' height='50' />
-            <div className='invisible position-absolute top-0 start-0 bg-opacity-10 d-flex  justify-content-center' id={item.id} >
-              <div className='align-self-center'>
+            <div className='invisible position-fixed top-0 start-0 bg-opacity-10 d-flex  justify-content-center' id={item.id} >
+              <div className='mt-5 '>
                 <Image  src={item.image} thumbnail width='320' height='240' />
-                <button onClick={() => { HideImage(item.id) }}> &times;</button>
+                <button className='btnposition' onClick={() => { HideImage(item.id) }}> &times;</button>
               </div>
             </div>
           </ul>))}
@@ -80,23 +80,23 @@ export default function Tree() {
         <div className={hiddenbikes ? "  " : " show "} >
           {state.filter(element => element.category === 'bikes').map((item) => (<ul className='mx-5 mt-2' key={item.id}>
             <Image onClick={() => { ShowImage(item.id, item.image) }} src={item.image} thumbnail width='70' height='50' />
-            <div className='invisible position-absolute top-0 start-0 bg-opacity-10 d-flex  justify-content-center' id={item.id} >
-              <div className='  align-self-center'>
+            <div className='invisible position-fixed top-0 start-0 bg-opacity-10 d-flex  justify-content-center' id={item.id} >
+              <div className=' mt-5  '>
                 <Image  src={item.image} thumbnail width='320' height='240' />
-                <button onClick={() => { HideImage(item.id) }}> &times;</button>
+                <button className='btnposition' onClick={() => { HideImage(item.id) }}> &times;</button>
               </div>
             </div>
           </ul>))}
         </div>
 
-        <ol className='olstyle' onClick={HideNature} >Nature</ol>
+        <ol className='olstyle ' onClick={HideNature} >Nature</ol>
         <div className={hiddenbinature ? "  " : " show "} >
           {state.filter(element => element.category === 'nature').map((item) => (<ul className='mx-5 mt-2' key={item.id}>
             <Image onClick={() => { ShowImage(item.id, item.image) }} src={item.image} thumbnail width='70' height='50' />
-            <div className='invisible position-absolute top-0 start-0 bg-opacity-10 d-flex  justify-content-center' id={item.id} >
-              <div className='  align-self-center '>
-                <Image className='mx-2' src={item.image} thumbnail width='320' height='240' />
-                <button onClick={() => { HideImage(item.id) }}> &times;</button>
+            <div className='invisible position-fixed top-0 start-0 bg-opacity-10 d-flex  justify-content-center ' id={item.id} >
+              <div className=' mt-5  '>
+                <Image  src={item.image} thumbnail width='320' height='240' />
+                <button className='btnposition' onClick={() => { HideImage(item.id) }}> &times;</button>
               </div>
             </div>
           </ul>))}

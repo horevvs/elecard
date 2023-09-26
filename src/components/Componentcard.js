@@ -2,7 +2,7 @@ import catalog from "../catalog.json";
 import '../App.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSpring, animated } from 'react-spring'
+
 
 
 function Componentcard() {

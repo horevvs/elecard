@@ -10,6 +10,9 @@
   z-index: 500;
 }
 
+.over{
+ position: fixed;
+}
 
 img {
   z-index: 5;
@@ -133,6 +136,13 @@ z-index: 900;
     transform: rotate(360deg);
   }
 }
+
+.btnposition{
+  position: relative;
+  left: -40px;
+  bottom: 65px;
+}
+
 
 
 .shake{
