@@ -9,7 +9,6 @@ function Componentcard() {
   //  создаем хук чтобы организовать навигацию
   const navigate = useNavigate();
 
-
   //  определяем наше состояине которое бере массив json bp
   const [state, setState] = useState(() => {
     const saved = localStorage.getItem("name");
@@ -22,11 +21,9 @@ function Componentcard() {
     }
   });
 
-
-
-
   // удаляет картинку при клике на крестик
   const send = (id) => {
+    //  находим по id  класс добавляем анимацию, обновление состояния происходит через 800мс
     document.getElementById(id).classList.add('shake')
 
     setTimeout(() => {
@@ -34,11 +31,10 @@ function Componentcard() {
         element => element.id !== id);
       localStorage.setItem("name", JSON.stringify(result));
       setState(result);
+      //  находим по id убираем класс с id  чтобы после перерендера убиралась анимация
       document.getElementById(id).classList.remove('shake')
     }, 800
     );
-
-
   }
 
   // возвращает исходное состояние как по заданию
@@ -88,22 +84,8 @@ function Componentcard() {
     navigate('/about');
   }
 
-
-
-
-
   return (
-
-
     <div className="d-flex flex-wrap justify-content-center body  ">
-      {/* {loading ? (
-        <div className='loader-fon d-flex  justify-content-center align-items-center'><span class="loader"></span></div>
-      ) : (
-        <div >
-
-        </div>
-      )} */}
-
 
       {state.map((item) => {
         return (
@@ -119,37 +101,44 @@ function Componentcard() {
           </div>
         )
       })}
+
       <div className="d-flex flex-wrap justify-content-between   mx-5 ">
+
         <div class="form-check px-3  ">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={sortDate} />
           <label class="form-check-label labelstyle " for="flexRadioDefault1">
             Сортировать по дате
           </label>
         </div>
+
         <div class="form-check px-3 ">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={sortname} />
           <label class="form-check-label text-dark labelstyle" for="flexRadioDefault2">
             Сортировать по имени
           </label>
         </div>
+
         <div class="form-check px-3 ">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={sortcategory} />
           <label class="form-check-label text-dark labelstyle" for="flexRadioDefault3">
             Сортировать по категории
           </label>
         </div>
+
         <div class="form-check px-3">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" onClick={sort} />
           <label class="form-check-label text-dark labelstyle" for="flexRadioDefault4">
             Сортировать по размеру файла
           </label>
         </div>
+
         <button onClick={returncatalogs} type="button" class="btn btn-dark mx-4 btnsize">Вернуть список</button>
+
         <div class="form-check px-3">
           <input type="checkbox" class="btn-check  " onClick={handleClick} id="btn-check-outlined" autocomplete="off" />
           <label class="btn btn-outline-primary bg-dark" for="btn-check-outlined">Перейти на страницу</label>
-
         </div>
+        
       </div>
     </div>
   );

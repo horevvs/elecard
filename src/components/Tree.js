@@ -8,15 +8,15 @@ import Image from 'react-bootstrap/Image';
 
 export default function Tree() {
 
-
-
-
   //  создаем хук чтобы организовать навигацию
   const navigate = useNavigate();
+
+  //  создаем состояния для открытия/закрытия выпадающего меню
   const [hiddencars, setHiddencars] = useState(true);
   const [hiddenbikes, setHiddenbikes] = useState(true);
   const [hiddenbinature, setHiddennature] = useState(true);
 
+  // состояние которое берет данные с локального хранилища, а если пусто с JSON файла
   const [state, setState] = useState(() => {
     const saved = localStorage.getItem("name");
     if (saved == null) {
@@ -27,7 +27,6 @@ export default function Tree() {
       return initialValue || "";
     }
   })
-
 
   // функция перехода на другую страницу
   const handleClick = () => {
@@ -47,12 +46,14 @@ export default function Tree() {
     setHiddennature(!hiddenbinature);
   }
 
+  // функции  скрытия модального окна
   function HideImage(id,) {
     document.getElementById(id).classList.add('invisible')
     document.querySelector('body').classList.remove('body');
     document.getElementById(id).classList.remove('modals')
   }
 
+  // функции  открытия модального окна
   function ShowImage(id) {
     document.getElementById(id).classList.remove('invisible')
     document.getElementById(id).classList.add('modals')
@@ -107,6 +108,7 @@ export default function Tree() {
         <input type="checkbox" class="btn-check  bg-dark" onClick={handleClick} id="btn-check-outlined" autocomplete="off" />
         <label class="btn btn-outline-primary bg-dark" for="btn-check-outlined"> Вернуться назад</label>
       </div>
+      
     </div>
   );
 }
